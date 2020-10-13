@@ -41,7 +41,7 @@
                             <div class="entry-content">
                                 @Html.Raw(i.ShortDescription)
                                 <div class="read-more">
-                                    <a href="blog-single.html">Read More</a>
+                                    <a href="@Url.Action("Index",new { post=i.Title.ToLower().Replace(".","-").Replace(",","-").Replace(" ","-")})">Read More</a>
                                 </div>
                             </div>
 

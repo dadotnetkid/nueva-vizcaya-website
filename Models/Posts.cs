@@ -21,5 +21,7 @@ namespace Models
         public string Meta { get; set; }
         public string Type { get; set; }
         public string ShortDescription { get; set; }
+        public string Author { get; set; }
+        public Nullable<System.DateTime> DatePosted { get; set; }
     }
 }

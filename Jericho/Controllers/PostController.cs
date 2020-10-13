@@ -16,7 +16,8 @@ namespace Jericho.Controllers
         public ActionResult Index(string post)
         {
             ViewBag.Title = post;
-            return View();
+            var model = unitOfWork.PostsRepo.Find(x => x.Title.Replace(".", "-").Replace(",", "-").Replace(" ", "-") == post);
+            return View(model);
         }
 
         [Route("page/{page?}")]
@@ -26,5 +27,6 @@ namespace Jericho.Controllers
             var model = unitOfWork.PostsRepo.Get(x => x.Type == page);
             return View(model);
         }
+
     }
 }

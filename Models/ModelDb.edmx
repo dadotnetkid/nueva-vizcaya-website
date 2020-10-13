@@ -16,6 +16,8 @@
           <Property Name="Meta" Type="nvarchar(max)" />
           <Property Name="Type" Type="nvarchar" MaxLength="50" />
           <Property Name="ShortDescription" Type="nvarchar(max)" />
+          <Property Name="Author" Type="nvarchar(max)" />
+          <Property Name="DatePosted" Type="datetime2" Precision="7" />
         </EntityType>
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
@@ -38,6 +40,8 @@
           <Property Name="Meta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ShortDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DatePosted" Type="DateTime" Precision="7" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -48,6 +52,8 @@
     <EntitySetMapping Name="Posts">
             <EntityTypeMapping TypeName="Model.Posts">
               <MappingFragment StoreEntitySet="Posts">
+                <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
                 <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="Meta" ColumnName="Meta" />
