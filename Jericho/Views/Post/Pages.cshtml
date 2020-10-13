@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Models.Posts>
+
+<main id="main" class="">
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="breadcrumb-hero">
+            <div class="container">
+                <div class="breadcrumb-hero">
+                    <h2>@ViewBag.Title.ToUpper()</h2>
+                    <p>News and Events of the Province of Nueva Vizcaya </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>@ViewBag.Title.ToUpper()</li>
+            </ol>
+        </div>
+    </section>
+    <section id="blog" class="blog">
+        <div class="container">
+
+            <div class="row">
+
+                @foreach (var i in Model)
+                {
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up">
+                        <article class="entry">
+
+                            <div class="entry-img">
+                                <img src="~/assets/img/blog-1.jpg" alt="" class="img-fluid">
+                            </div>
+
+                            <h2 class="entry-title">
+                                <a href="#">@i.Title</a>
+                            </h2>
+
+
+
+                            <div class="entry-content">
+                                @Html.Raw(i.ShortDescription)
+                                <div class="read-more">
+                                    <a href="blog-single.html">Read More</a>
+                                </div>
+                            </div>
+
+                        </article><!-- End blog entry -->
+                    </div>
+                }
+
+
+
+
+
+            </div>
+
+            <div class="blog-pagination aos-init" data-aos="fade-up">
+                <ul class="justify-content-center">
+                    <li class="disabled"><i class="icofont-rounded-left"></i></li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <div class="row">
+
+    </div>
+</main>

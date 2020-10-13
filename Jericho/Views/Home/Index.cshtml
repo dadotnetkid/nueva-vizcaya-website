@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+        <h1>Welcome to Nueva Vizcaya</h1>
+        <h2>More than mountain peaks, breathtaking waterfalls and mystical caves, the Province of Nueva Vizcaya offers a unique cultural experience with our multi-ethnic</h2>
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+</section>
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    @Html.Partial("_about")
+    <!-- End About Section -->
+    <!-- ======= Cta Section ======= -->
+    @*<section id="cta" class="cta">
+        <div class="container" data-aos="fade-in">
+
+            <div class="text-center">
+                <h3>Call To Action</h3>
+                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a class="cta-btn" href="#">Call To Action</a>
+            </div>
+
+        </div>
+    </section>*@<!-- End Cta Section -->
+    <!-- ======= Services Section ======= -->
+    @Html.Partial("_services")
+    <!-- End Services Section -->
+
+</main>
