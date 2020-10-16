@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Capitol";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="breadcrumb-hero">
+            <div class="container">
+                <div class="breadcrumb-hero">
+                    <h2>Capitol Complex</h2>
+                    <p><b>Nueva Vizcaya Provincial Capitol Complex </b>is a symbol of the noble aspiration, foresight, and vision of its builder, Governor Patricio G. Dumlao. Located along the national road, it houses all the provincial government offices. The capitol building is a study of architectural ingenuity.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Capitol Complex Details</li>
+            </ol>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="portfolio-details-container">
+
+                <div class="owl-carousel portfolio-details-carousel">
+                    @foreach (var i in Directory.GetFiles(HttpContext.Current.Server.MapPath("~/assets/img/gallery/capitol")))
+                    {
+                        <img src="@Url.Content(Path.Combine("~/assets/img/gallery/capitol", Path.GetFileName(i)))" class="img-fluid" alt="">
+                    }
+                </div>
+
+                <div class="portfolio-info">
+                    <h3>Information</h3>
+                    <ul>
+
+                        <li><strong>Tourist Spot URL</strong>: <a href="https://www.vigattintourism.com/tourism/articles/Nueva-Vizcaya-Provincial-Capitol-Complex">capitol</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="portfolio-description">
+                <h2>Capitol Complex </h2>
+
+                <p><b>Nueva Vizcaya Provincial Capitol Complex </b>is a symbol of the noble aspiration, foresight, and vision of its builder, Governor Patricio G. Dumlao. Located along the national road, it houses all the provincial government offices. The capitol building is a study of architectural ingenuity.</p>
+                The capital is a park itself, an approximately 10-hectare piece of land carpeted with green grass and elegantly landscaped with exotic plant species. You can see concrete benches, sidewalks lighted with giant lamps, a man-made lagoon ideal for rowing the colorful mini-boats operated by handicaps, wishing well, picnic huts, sports facilities, and murals. The park is also called “the Luneta of the North”.
+            </div>
+
+        </div>
+
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->

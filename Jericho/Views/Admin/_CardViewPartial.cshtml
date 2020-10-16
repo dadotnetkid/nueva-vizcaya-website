@@ -1,0 +1,67 @@
+@using System.Web.UI.WebControls
+@{
+    var cardView = Html.DevExpress().CardView(settings =>
+    {
+        settings.Name = "CardView";
+        settings.Width = Unit.Percentage(100);
+        settings.CallbackRouteValues = new { Controller = "Admin", Action = "CardViewPartial" };
+
+        settings.SettingsEditing.AddNewCardRouteValues = new { Controller = "Admin", Action = "CardViewPartialAddNew" };
+        settings.SettingsEditing.UpdateCardRouteValues = new { Controller = "Admin", Action = "CardViewPartialUpdate" };
+        settings.SettingsEditing.DeleteCardRouteValues = new { Controller = "Admin", Action = "CardViewPartialDelete" };
+        settings.SettingsEditing.Mode = CardViewEditingMode.EditForm;
+        settings.SettingsBehavior.ConfirmDelete = true;
+
+        settings.KeyFieldName = "Id";
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowHeaderPanel = true;
+        settings.Settings.ShowHeaderFilterButton = true;
+        settings.SettingsBehavior.AllowSelectByCardClick = true;
+
+        settings.Columns.Add("Title");
+        settings.Columns.Add("Url");
+        settings.Columns.Add("Meta");
+        settings.Columns.Add("Type");
+        settings.Columns.Add("ShortDescription");
+        settings.Columns.Add("Author");
+        settings.Columns.Add("DatePosted");
+
+        settings.CardLayoutProperties.Items.AddCommandItem(i =>
+        {
+            i.ShowNewButton = true;
+            i.ShowEditButton = true;
+            i.ShowDeleteButton = true;
+        });
+        settings.CardLayoutProperties.Items.AddEditModeCommandItem();
+        settings.CardLayoutProperties.Items.Add("Title");
+        settings.CardLayoutProperties.Items.Add("PostContent");
+        settings.CardLayoutProperties.Items.Add("Url");
+        settings.CardLayoutProperties.Items.Add("Meta");
+        settings.CardLayoutProperties.Items.Add("Type");
+        settings.CardLayoutProperties.Items.Add("ShortDescription");
+        settings.CardLayoutProperties.Items.Add("Author");
+        settings.CardLayoutProperties.Items.Add("DatePosted");
+        settings.SetEditFormTemplateContent(content =>
+        {
+            Html.DevExpress().PopupControl(pop =>
+            {
+                pop.Name = "popAddEditContent";
+                pop.HeaderText = "Add Edit";
+                pop.PopupHorizontalAlign = PopupHorizontalAlign.WindowCenter;
+                pop.Width = Unit.Pixel(1200);
+                pop.SetContent(() =>
+                {
+                    Html.RenderAction("AddEditCardPartial", new { postId = content.KeyValue });
+                });
+                pop.ShowOnPageLoad = true;
+                pop.ShowRefreshButton = true;
+            }).GetHtml();
+        });
+    });
+    if (ViewData["EditError"] != null)
+    {
+        cardView.SetEditErrorText((string)ViewData["EditError"]);
+    }
+}
+@cardView.Bind(Model).GetHtml()

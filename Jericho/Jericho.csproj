@@ -47,6 +47,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.2.Core, Version=18.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Core, Version=18.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.2.Export, Version=18.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v18.2, Version=18.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v18.2, Version=18.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Mvc5.v18.2, Version=18.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v18.2, Version=18.2.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\..\Development Cache\.nuget\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -132,6 +140,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Global.asax.cs">
@@ -176,6 +187,21 @@
     <Content Include="assets\img\features-2.jpg" />
     <Content Include="assets\img\features-3.jpg" />
     <Content Include="assets\img\features-4.jpg" />
+    <Content Include="assets\img\gallery\Capisaan\cap 10.jpg" />
+    <Content Include="assets\img\gallery\Capisaan\cap 11.jpg" />
+    <Content Include="assets\img\gallery\Capisaan\cap 12.jpg" />
+    <Content Include="assets\img\gallery\Capisaan\cap 9.jpg" />
+    <Content Include="assets\img\gallery\Capitol\cap 1.jpg" />
+    <Content Include="assets\img\gallery\Capitol\cap 22.jpg" />
+    <Content Include="assets\img\gallery\Capitol\cap 33.jpg" />
+    <Content Include="assets\img\gallery\Lower Magat\cap 13.jpg" />
+    <Content Include="assets\img\gallery\Lower Magat\cap 14.jpg" />
+    <Content Include="assets\img\gallery\Lower Magat\cap 15.jpg" />
+    <Content Include="assets\img\gallery\Lower Magat\cap 16.jpg" />
+    <Content Include="assets\img\gallery\Lower Magat\cap 17.jpg" />
+    <Content Include="assets\img\gallery\Lower Magat\cap 18.jpg" />
+    <Content Include="assets\img\gallery\Lower Magat\cap 19.jpg" />
+    <Content Include="assets\img\gallery\Lower Magat\cap 20.jpg" />
     <Content Include="assets\img\hero-bg.jpg" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\portfolio-details-1.jpg" />
@@ -434,9 +460,22 @@
     <Content Include="Views\Home\_about.cshtml" />
     <Content Include="Views\Post\Index.cshtml" />
     <Content Include="Views\Post\Pages.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\_CardViewPartial.cshtml" />
+    <Content Include="Views\Admin\AddEditCardPartial.cshtml" />
+    <Content Include="Views\Admin\_PostHtmlEditorPartial.cshtml" />
+    <Content Include="Views\About\History.cshtml" />
+    <Content Include="Views\About\HistoricalBackground.cshtml" />
+    <Content Include="Views\About\PoliticalOfficials.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
+    <Content Include="Views\Gallery\LowerMagat.cshtml" />
+    <Content Include="Views\Gallery\CapisaanCave.cshtml" />
+    <Content Include="Views\Gallery\Capitol.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Thumb\" />
+    <Folder Include="Content\UploadImages\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

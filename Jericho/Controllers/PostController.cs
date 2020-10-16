@@ -21,12 +21,14 @@ namespace Jericho.Controllers
         }
 
         [Route("page/{page?}")]
-        public ActionResult Pages(string page)
+        public ActionResult Pages(string page,string type)
         {
             ViewBag.Title = page;
             var model = unitOfWork.PostsRepo.Get(x => x.Type == page);
+            ViewBag.type = type;
             return View(model);
         }
+        
 
     }
 }

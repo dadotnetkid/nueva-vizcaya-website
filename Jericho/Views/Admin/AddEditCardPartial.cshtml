@@ -1,0 +1,13 @@
+﻿@model Models.Posts
+
+@using (Html.BeginForm())
+{
+    Html.RenderPartial("_PostHtmlEditorPartial", Model);
+}
+
+@Html.DevExpress().Button(settings =>
+{
+    settings.Text = "Submit";
+    settings.Name = "btnSubmt";
+    settings.ClientSideEvents.Click = "function(s,e){CardView.UpdateEdit();}";
+}).GetHtml()

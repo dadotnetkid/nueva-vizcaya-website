@@ -1,0 +1,54 @@
+﻿<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="breadcrumb-hero">
+            <div class="container">
+                <div class="breadcrumb-hero">
+                    <h2>Lower Magat Details</h2>
+                    <p>Trekking, biking, nature trails, swimming, boating, fishing, camping, lodging, video/photo shoot, meetings/trainings, viewing and appreciating scenic beauty is of the hills, valleys and Meadows </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Lower Magat Details</li>
+            </ol>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="portfolio-details-container">
+
+                <div class="owl-carousel portfolio-details-carousel">
+                    @foreach (var i in Directory.GetFiles(HttpContext.Current.Server.MapPath("~/assets/img/gallery/lower magat")))
+                    {
+                        <img src="@Url.Content(Path.Combine("~/assets/img/gallery/lower magat", Path.GetFileName(i)))" class="img-fluid" alt="">
+                    }
+                </div>
+
+                <div class="portfolio-info">
+                    <h3>Information</h3>
+                    <ul>
+                      
+                        <li><strong>Tourist Spot URL</strong>: <a href="https://www.facebook.com/lowermagatecotourismpark/">Lower Magat</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="portfolio-description">
+                <h2>Lower Magat detail</h2>
+                <p>
+                    Trekking, biking, nature trails, swimming, boating, fishing, camping, lodging, video/photo shoot, meetings/trainings, viewing and appreciating scenic beauty is of the hills, valleys and Meadows
+                </p>
+            </div>
+
+        </div>
+
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->

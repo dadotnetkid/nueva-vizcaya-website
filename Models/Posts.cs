@@ -23,5 +23,6 @@ namespace Models
         public string ShortDescription { get; set; }
         public string Author { get; set; }
         public Nullable<System.DateTime> DatePosted { get; set; }
+        public string img { get; set; }
     }
 }

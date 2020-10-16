@@ -1,0 +1,15 @@
+@using Jericho.Controllers;
+
+@Html.DevExpress().HtmlEditor(settings => {
+    settings.Name = "PostHtmlEditor";
+    settings.CallbackRouteValues = new { Controller = "Admin", Action = "PostHtmlEditorPartial" };
+    settings.Width = 500;
+	settings.ToolbarMode = HtmlEditorToolbarMode.Menu;
+
+    	settings.SettingsDialogs.InsertImageDialog.SettingsImageUpload.UploadCallbackRouteValues = new { Controller = "Admin", Action = "PostHtmlEditorPartialImageUpload" };
+    settings.SettingsDialogs.InsertImageDialog.SettingsImageUpload.UploadFolder = AdminControllerPostHtmlEditorSettings.ImageUploadDirectory;
+	settings.SettingsDialogs.InsertImageDialog.SettingsImageUpload.ValidationSettings.Assign(AdminControllerPostHtmlEditorSettings.ImageUploadValidationSettings);
+		
+				
+			settings.SettingsDialogs.InsertImageDialog.SettingsImageSelector.Assign(AdminControllerPostHtmlEditorSettings.ImageSelectorSettings);			
+	}).GetHtml()

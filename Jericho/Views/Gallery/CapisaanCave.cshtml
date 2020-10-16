@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Capisaan Cave";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="breadcrumb-hero">
+            <div class="container">
+                <div class="breadcrumb-hero">
+                    <h2>Capisaan Cave Details</h2>
+                    <p>Capisaan Cave System is one of the less explored and visited tourist spot in the country due to its hidden location. Another note is that this particular cave perfectly fits those people who are craving for adventure-filled and thrilling experience. This is perfect for those people who don’t mind diving in the mud, getting bruised and scarred, swimming in the freezing water, passing through small holes, falling in ravines, and traversing an unfamiliar place full of surprises in every step that you make </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Capisaan Cave Details</li>
+            </ol>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="portfolio-details-container">
+
+                <div class="owl-carousel portfolio-details-carousel">
+                    @foreach (var i in Directory.GetFiles(HttpContext.Current.Server.MapPath("~/assets/img/gallery/capisaan")))
+                    {
+                        <img src="@Url.Content(Path.Combine("~/assets/img/gallery/capisaan", Path.GetFileName(i)))" class="img-fluid" alt="">
+                    }
+                </div>
+
+                <div class="portfolio-info">
+                    <h3>Information</h3>
+                    <ul>
+
+                        <li><strong>Tourist Spot URL</strong>: <a href="https://www.facebook.com/Capisaan-Caves-216946188483469">Capisaan Cave</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="portfolio-description">
+                <h2>Capisaan Cave detail</h2>
+                <p>
+                    "Capisaan Cave System is one of the less explored and visited tourist spot in the country due to its hidden location. Another note is that this particular cave perfectly fits those people who are craving for adventure-filled and thrilling experience. This is perfect for those people who don’t mind diving in the mud, getting bruised and scarred, swimming in the freezing water, passing through small holes, falling in ravines, and traversing an unfamiliar place full of surprises in every step that you make." - 18megapixel
+                    
+                </p>
+                <p>
+                    How to get there?
+                    From Manila: Buses bound to Santiago/Isabela/Tuguegarao
+                    From Isabela/Tuguegarao: Buses bound to Cubao/Pasay/Caloocan/Sampaloc
+                    *Ask the driver to drop you along the highway (near Savemore) of Bambang, Nueva Vizcaya
+                    From Bambang, near MVAT, PUJs/PUVs to Capisaan, Kasibu
+                    From Solano, near F1 Gasoline Station, PUJs to Capisaan, Kasibu
+                    *Schedule is from 11 AM to 12 NN only
+                    *1 hour travel time (be early because slots/trips are limited)
+                    Trips from Capisaan to Solano/Bambang is from 4:00 AM to 5:00 AM only (PUJs)
+             
+                </p>
+                <p>
+                    Caving Time:
+                    Whole route 3-5 hrs
+                    Half way 2-3 hrs
+                    Guide Fee:
+                    1-5 pax 1350 pesos
+                    10 pax 2700 pesos
+                    15 pax 4050 pesos
+                    Caving Experience starts at 8 AM
+                    Homestay starts at Php200/pax
+                </p>
+            </div>
+
+        </div>
+
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->

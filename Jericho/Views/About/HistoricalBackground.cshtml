@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Historical Background";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<main id="main" class="">
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="breadcrumb-hero">
+            <div class="container">
+                <div class="breadcrumb-hero">
+                    <h2>About</h2>
+                    <p>Historical overview of the Province of Nueva Vizcaya </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>Historical Background</li>
+            </ol>
+        </div>
+    </section>
+    @Html.Action("History")
+</main>

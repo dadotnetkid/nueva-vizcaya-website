@@ -18,6 +18,7 @@
           <Property Name="ShortDescription" Type="nvarchar(max)" />
           <Property Name="Author" Type="nvarchar(max)" />
           <Property Name="DatePosted" Type="datetime2" Precision="7" />
+          <Property Name="img" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
@@ -42,6 +43,7 @@
           <Property Name="ShortDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Author" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="DatePosted" Type="DateTime" Precision="7" />
+          <Property Name="img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -52,6 +54,7 @@
     <EntitySetMapping Name="Posts">
             <EntityTypeMapping TypeName="Model.Posts">
               <MappingFragment StoreEntitySet="Posts">
+                <ScalarProperty Name="img" ColumnName="img" />
                 <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
                 <ScalarProperty Name="Author" ColumnName="Author" />
                 <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
