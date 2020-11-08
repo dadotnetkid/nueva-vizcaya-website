@@ -28,5 +28,16 @@ namespace Jericho.Controllers
         {
             return View();
         }
+        [Route("balete-pass")]
+        public ActionResult Balete()
+        {
+            return View();
+        }
+
+        [Route("imugan-falls")]
+        public ActionResult ImuganFalls()
+        {
+            return View();
+        }
     }
 }

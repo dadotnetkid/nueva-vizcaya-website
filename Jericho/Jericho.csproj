@@ -187,6 +187,10 @@
     <Content Include="assets\img\features-2.jpg" />
     <Content Include="assets\img\features-3.jpg" />
     <Content Include="assets\img\features-4.jpg" />
+    <Content Include="assets\img\gallery\balete\cap 455.jpg" />
+    <Content Include="assets\img\gallery\balete\cap 66.jpg" />
+    <Content Include="assets\img\gallery\balete\cap 77.jpg" />
+    <Content Include="assets\img\gallery\balete\cap 88.jpg" />
     <Content Include="assets\img\gallery\Capisaan\cap 10.jpg" />
     <Content Include="assets\img\gallery\Capisaan\cap 11.jpg" />
     <Content Include="assets\img\gallery\Capisaan\cap 12.jpg" />
@@ -194,6 +198,10 @@
     <Content Include="assets\img\gallery\Capitol\cap 1.jpg" />
     <Content Include="assets\img\gallery\Capitol\cap 22.jpg" />
     <Content Include="assets\img\gallery\Capitol\cap 33.jpg" />
+    <Content Include="assets\img\gallery\Capitol\cap 44.jpg" />
+    <Content Include="assets\img\gallery\imugan\cap 13.jpg" />
+    <Content Include="assets\img\gallery\imugan\cap 14.jpg" />
+    <Content Include="assets\img\gallery\imugan\cap 15.jpg" />
     <Content Include="assets\img\gallery\Lower Magat\cap 13.jpg" />
     <Content Include="assets\img\gallery\Lower Magat\cap 14.jpg" />
     <Content Include="assets\img\gallery\Lower Magat\cap 15.jpg" />
@@ -471,6 +479,8 @@
     <Content Include="Views\Gallery\LowerMagat.cshtml" />
     <Content Include="Views\Gallery\CapisaanCave.cshtml" />
     <Content Include="Views\Gallery\Capitol.cshtml" />
+    <Content Include="Views\Gallery\Balete.cshtml" />
+    <Content Include="Views\Gallery\ImuganFalls.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,59 @@
+﻿
+
+@{
+    ViewBag.Title = "Balete Pass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="breadcrumb-hero">
+            <div class="container">
+                <div class="breadcrumb-hero">
+                    <h2>Balete Pass Details</h2>
+                    <p>is a rugged piece of terrain where a part of the Caraballo Sur reaches south and joins the Sierra Madre. Because of its strategic importance as the only access between Pampanga and Cagayan Valley, the pass became the scene of much bloody fighting during the final stages of World War II. Japanese Shobu soldiers headed by General Tomoyuki Yamashita tried to hold their positions while Filipino and American soldiers under the leadership of Colonel Robert Lapham, were determined to dislodge them from February to March 1945. By the close of hostilities, the blood of almost seventeen thousand Japanese fighting units and the US-Filipino allied forces mingled with the soil. Markers that commemorate their sacrifice stand by the road’s highest point, with good view into the highlands. The shrine is a reminder for Gen. James L. Dalton who was killed by a sniper’s bullet during the end of World War II. Located 3,000 feet above sea level, Balete Pass is also the gateway to the Cagayan Valley Region and the Ifugao Rice Terraces.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>Balete Pass Details</li>
+            </ol>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="portfolio-details-container">
+
+                <div class="owl-carousel portfolio-details-carousel">
+                    @foreach (var i in Directory.GetFiles(HttpContext.Current.Server.MapPath("~/assets/img/gallery/balete")))
+                    {
+                        <img src="@Url.Content(Path.Combine("~/assets/img/gallery/balete", Path.GetFileName(i)))" class="img-fluid" alt="">
+                    }
+                </div>
+
+                <div class="portfolio-info">
+                    <h3>Information</h3>
+                    <ul>
+
+                        <li><strong>Tourist Spot URL</strong>: <a href="#">Balete Pass </a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="portfolio-description">
+                <h2>Balete Pass detail</h2>
+                <p>is a rugged piece of terrain where a part of the Caraballo Sur reaches south and joins the Sierra Madre. Because of its strategic importance as the only access between Pampanga and Cagayan Valley, the pass became the scene of much bloody fighting during the final stages of World War II. Japanese Shobu soldiers headed by General Tomoyuki Yamashita tried to hold their positions while Filipino and American soldiers under the leadership of Colonel Robert Lapham, were determined to dislodge them from February to March 1945. By the close of hostilities, the blood of almost seventeen thousand Japanese fighting units and the US-Filipino allied forces mingled with the soil. Markers that commemorate their sacrifice stand by the road’s highest point, with good view into the highlands. The shrine is a reminder for Gen. James L. Dalton who was killed by a sniper’s bullet during the end of World War II. Located 3,000 feet above sea level, Balete Pass is also the gateway to the Cagayan Valley Region and the Ifugao Rice Terraces.</p>
+            </div>
+
+        </div>
+
+    </section><!-- End Portfolio Details Section -->
+
+</main><!-- End #main -->
